@@ -39,9 +39,9 @@ for title in task_title:
 
 file = '{}.json'.format(user_id)
 
-todo_dict = {"USER_ID": []}
+todo_dict = {user_id: []}
 for task in user_tasks:
-    todo_dict["USER_ID"].append({"task": task['title'],
+    todo_dict[user_id].append({"task": task['title'],
                                  "completed": task['completed'],
                                  "username": user_info['username']})
 
