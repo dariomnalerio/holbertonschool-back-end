@@ -42,8 +42,8 @@ file = '{}.json'.format(user_id)
 todo_dict = {user_id: []}
 for task in user_tasks:
     todo_dict[user_id].append({"task": task['title'],
-                                 "completed": task['completed'],
-                                 "username": user_info['username']})
+                               "completed": task['completed'],
+                               "username": user_info['username']})
 
 with open(file, 'w') as f:
     json.dump(todo_dict, f)
