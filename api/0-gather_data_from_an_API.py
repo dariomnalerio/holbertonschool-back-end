@@ -6,8 +6,11 @@ returns information about his/her TODO list progress.
 import requests
 from sys import argv
 
-
-user_id = int(argv[1])
+try:
+    user_id = int(argv[1])
+except IndexError:
+    print("You must enter an integer")
+    exit()
 
 response = requests.get("https://jsonplaceholder.typicode.com/users/{}"
                         .format(user_id))
