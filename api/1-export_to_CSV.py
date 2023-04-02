@@ -4,9 +4,9 @@ Python script that, using this REST API, for a given employee ID,
 returns information about his/her TODO list progress.
 Exports data in the CSV format.
 """
+import csv
 import requests
 from sys import argv
-import csv
 
 
 try:
@@ -45,4 +45,3 @@ with open(file, 'w') as f:
     for task in user_tasks:
         writer.writerow([user_id, user_info['username'],
                         task['completed'], task['title']])
- 
